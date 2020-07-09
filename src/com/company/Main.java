@@ -143,6 +143,7 @@ public class Main {
         System.out.println(func(UserData.nextInt(), UserData.nextInt()));//ели в фенкции не указан вывод данных
 
         powerArray();*/
+        powerArray();
 
 
 
