@@ -4,6 +4,22 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+
+        //классы  конструкторы
+        Human Haiim = new Human(); //создан е переменной Haiim обьекта Human
+        Human Sara = new Human(175, "Sara", "w");
+        System.out.print("name is: " + Sara);
+
+
+
+
+
+
+
+
+
+
+
         /*System.out.print("hello world");
         System.out.println("hello world");
 
