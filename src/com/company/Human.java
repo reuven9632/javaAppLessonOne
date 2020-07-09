@@ -1,6 +1,9 @@
 package com.company;
 
 public class Human {
+    public  int height = 180;
+    public  int width = 45;
+    public  Boolean race = true;//true -- male, false -- fimale
 
     //классы
     //создавая новый класс нужно оьявить его pulic так как иначе все его функции и переменные не будут видны в других классах
