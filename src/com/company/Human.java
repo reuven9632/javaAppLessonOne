@@ -7,6 +7,8 @@ public class Human {
     public  int height = 180;
     public  int width = 45;
     public  String male = "DefaultMale_none"; // m -- man | w -- woman
+    int a;
+    String b;
 
 
 
@@ -68,6 +70,12 @@ public class Human {
 
         name = nameOfUser;
         height = h;
+    }
+
+    public Human(int aa, String bb) {
+        System.out.println("CONSTRUCTOR OF HUMAN a/b");
+        this.a = aa;
+        this.b = bb;
     }
 
 

@@ -7,7 +7,44 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //классы  конструкторы
+        //Анонимные классы и вложенные классы
+        Computer comp = new Computer(); // переменная представляющая конкретный компьютер
+        String comp_On_Or_Off;          // переменная представляющая ответ пользователя включить или выключить компьютер
+        Scanner userData = new Scanner(System.in);  // сканирование данных введеных пользователем
+        System.out.println("you wont power on computer? (y/n)"); //запрос
+        comp_On_Or_Off = userData.nextLine();       //присвоение данных пользователя соответствующей переменной о вкл.\выкл.
+        if (comp_On_Or_Off.equals("y"))
+            comp.startComputer();
+        else if (comp_On_Or_Off.equals("n"))
+            comp.offComputer();
+        else
+            System.out.println("error of this kind does not exist");
+
+
+
+        /*// Анонимные класс НЕПОНЯТНО КАК ИМ ПОЛЬЗОВАТЬСЯ
+        new Computer() {
+            void StartProcess() {
+                System.out.println("Computer is on");
+                this.i7.start();
+                this.matrix256.start();
+            }
+        };*/
+
+
+
+
+
+        //полиморфизм на примере классов Paper в котором Sircle и Triangle применяют ощий метод со своими параметрами
+        Paper array[] = new Paper[] {new Sircle(), new Triangle(), new Sircle()};
+        for (int i = 0; i < array.length; i++) 
+            array[i].draw();
+
+
+
+
+
+        //классы  , конструкторы
         Human haiim = new Human("Haiim"); //создан е переменной Haiim обьекта Human
         Human sara = new Human("Sara", 175);
         System.out.println("name is: " + sara.name);
@@ -21,6 +58,8 @@ public class Main {
 //        System.out.println("what is you height? ");
 //        haiim.height = readUserData.nextInt();
 //        System.out.println(haiim.height);
+
+        Student frefhman = new Student(1, "viktor"); //нужно разблокировать соответствующие конструкторы в Human и Student
 
         Student boris = new Student(2);
         Student igor = new Student();
