@@ -3,8 +3,15 @@ package com.company;
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
+
+        //перегрузка функций
+        OverloadFunction sumOfNumber = new OverloadFunction();
+        sumOfNumber.out();
+
+
+
+
 
         //Абстрактные классы
         Geometric_Figure square = new Square_Figure(); //создаем переменную square абстрактного класса Geometric_Figure,
