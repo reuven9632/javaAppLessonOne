@@ -3,10 +3,10 @@ package com.company;
 import java.util.Scanner;
 
 public class Human {
-    public String name = "DefaultName";
+    public String name = "DefaultName_none";
     public  int height = 180;
     public  int width = 45;
-    public  String male = "default_dasn`t_have_male"; // m -- man | w -- woman
+    public  String male = "DefaultMale_none"; // m -- man | w -- woman
 
 
 
@@ -29,9 +29,8 @@ public class Human {
     public void male() { // если метод(функция) являеться static то нельзя обращаться к полям(переменным) класса
         String usermale;
         Scanner userData = new Scanner(System.in);
-        System.out.print(name + " what is your male? ");
+        System.out.print(name + " what is your male?(m/w) ");
         usermale = userData.next();
-        //String male;
         if (usermale.equals("m")) {   // строку нельзя проверять на равенство каким либо символам, только такая запись
             male = "man";
             System.out.println(name + " is man");
@@ -40,12 +39,10 @@ public class Human {
             male = "woman";
             System.out.println(name + " is woman");
         }
-        else
+        else {
             System.out.println("error of this kind does not exist");
-
-
-        System.out.println("user male is: " + male);
-
+            System.out.println("Male of user " + name + " is: " + male);
+        }
     }
 
 
@@ -63,6 +60,9 @@ public class Human {
         height = h;
     }
 
+    public Human (String name) {
+        this.name = name;
+    }
 
     public Human (String nameOfUser, int h) {
 

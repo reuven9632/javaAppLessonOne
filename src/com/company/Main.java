@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
 
         //классы  конструкторы
-        Human haiim = new Human(); //создан е переменной Haiim обьекта Human
+        Human haiim = new Human("Haiim"); //создан е переменной Haiim обьекта Human
         Human sara = new Human("Sara", 175);
         System.out.println("name is: " + sara.name);
         System.out.println("name is: " + sara.height);
@@ -24,6 +24,10 @@ public class Main {
 
         Student boris = new Student(2);
         Student igor = new Student();
+        Student stas = new Student("Stas");
+
+
+        stas.tell_hi_userName();
 
         haiim.male();
         sara.male();
