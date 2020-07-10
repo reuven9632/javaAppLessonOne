@@ -7,7 +7,7 @@ public class Main {
 
         //классы  конструкторы
         Human Haiim = new Human(); //создан е переменной Haiim обьекта Human
-        Human Sara = new Human(175, "Sara", "w");
+        Human Sara = new Human(175, "Sara", 'w');
         System.out.print("name is: " + Sara);
 
 

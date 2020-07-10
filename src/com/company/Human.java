@@ -33,12 +33,12 @@ public class Human {
     }
 
 
-    public Human (int h, String name, String male) {
-        if (male = "m") {
+    public Human (int h, String name, char male) {
+        if (male == 'm') {
             race = true;
             System.out.println("name is: " + name + " and his height = " + h);
             }
-        else if (male = "w") {
+        else if (male == 'w') {
             race = false;
             System.out.println("name is: " + name + " and shis height = " + h);
             }
