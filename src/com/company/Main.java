@@ -1,4 +1,6 @@
 package com.company;
+import System.out.print;
+
 import java.util.Scanner;
 
 public class Main {
@@ -6,9 +8,26 @@ public class Main {
     public static void main(String[] args) {
 
         //классы  конструкторы
-        Human Haiim = new Human(); //создан е переменной Haiim обьекта Human
-        Human Sara = new Human(175, "Sara", 'w');
-        System.out.print("name is: " + Sara);
+        Human haiim = new Human(); //создан е переменной Haiim обьекта Human
+        Human sara = new Human("Sara", 175);
+        System.out.println("name is: " + sara.name);
+        System.out.println("name is: " + sara.height);
+
+//        Scanner readUserData = new Scanner(System.in);
+//        System.out.println("what is you name? ");
+//        haiim.name = readUserData.nextLine();
+//        System.out.println(haiim.name);
+//
+//        System.out.println("what is you height? ");
+//        haiim.height = readUserData.nextInt();
+//        System.out.println(haiim.height);
+
+        Student boris = new Student(2);
+        Student igor = new Student();
+
+        haiim.male();
+        sara.male();
+
 
 
 

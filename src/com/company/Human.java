@@ -1,9 +1,13 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Human {
+    public String name = "DefaultName";
     public  int height = 180;
     public  int width = 45;
-    public  Boolean race = true;//true -- male, false -- fimale
+    public  String male = "default_dasn`t_have_male"; // m -- man | w -- woman
+
 
 
 
@@ -16,6 +20,33 @@ public class Human {
 
 
 
+
+
+
+
+
+    //создаю метод в котором реализуеться вопрос у пользователя какого он рода м\ж и вывод ошибки в случае некоректного ввода
+    public void male() { // если метод(функция) являеться static то нельзя обращаться к полям(переменным) класса
+        String usermale;
+        Scanner userData = new Scanner(System.in);
+        System.out.print(name + " what is your male? ");
+        usermale = userData.next();
+        //String male;
+        if (usermale.equals("m")) {   // строку нельзя проверять на равенство каким либо символам, только такая запись
+            male = "man";
+            System.out.println(name + " is man");
+        }
+        else if (usermale.equals("w")){
+            male = "woman";
+            System.out.println(name + " is woman");
+        }
+        else
+            System.out.println("error of this kind does not exist");
+
+
+        System.out.println("user male is: " + male);
+
+    }
 
 
 
@@ -33,19 +64,9 @@ public class Human {
     }
 
 
-    public Human (int h, String name, char male) {
-        if (male == 'm') {
-            race = true;
-            System.out.println("name is: " + name + " and his height = " + h);
-            }
-        else if (male == 'w') {
-            race = false;
-            System.out.println("name is: " + name + " and shis height = " + h);
-            }
-        else
-            System.out.println("ERROR" + name + " has nonexistend male");
+    public Human (String nameOfUser, int h) {
 
-
+        name = nameOfUser;
         height = h;
     }
 
