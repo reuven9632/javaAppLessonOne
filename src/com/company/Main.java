@@ -1,11 +1,19 @@
 package com.company;
-import System.out.print;
 
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
+
+        //Абстрактные классы
+        Geometric_Figure square = new Square_Figure(); //создаем переменную square абстрактного класса Geometric_Figure,
+        // но разрешение переменной указываем !!!не родительского класса Geometric_Figure!!!, !!!а дочернего Square_Figure!!!
+        square.draw_Figure();//вызов фенкции которая нарисует наш квадрат
+
+
+
+
 
         //Анонимные классы и вложенные классы
         Computer comp = new Computer(); // переменная представляющая конкретный компьютер
@@ -37,7 +45,7 @@ public class Main {
 
         //полиморфизм на примере классов Paper в котором Sircle и Triangle применяют ощий метод со своими параметрами
         Paper array[] = new Paper[] {new Sircle(), new Triangle(), new Sircle()};
-        for (int i = 0; i < array.length; i++) 
+        for (int i = 0; i < array.length; i++)
             array[i].draw();
 
 
@@ -137,7 +145,7 @@ public class Main {
 
 
         //циклы     for/while/while-do
-        //если в цикле присутствует только однф строка кода то скобки ставить не обязательно
+        //если в цикле присутствует только одна строка кода то скобки ставить не обязательно
         /*for (int i = 1; i < 100; i++)    //создаем или используем переменную; условие при котором будет выполняться цикл; присваеваем переменной новое значение
             System.out.println("changes i equal = " + i);*/
 
